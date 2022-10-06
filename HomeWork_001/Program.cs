@@ -62,7 +62,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 int current;
 if (number > 0)
 {
-    current = 1;
+    current = 2;
 }
 else
 {
