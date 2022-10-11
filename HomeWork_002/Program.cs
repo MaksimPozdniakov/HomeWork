@@ -90,12 +90,11 @@ else
 
 // Второй вариант:
 /*
-int DateNumber(int num)
+void DateNumber(int num)
 {
    if(num > 5 && num < 8) Console.WriteLine("This day of the week is a holiday!");
    if(num < 1 | num > 7) Console.WriteLine("There are only 7 days in a week, enter the correct number!");
    if(num >= 1 && num <= 5) Console.WriteLine("This day of the week is not a holiday!");
-   return 0;
 }
 
 Console.Write("Enter the date ");
