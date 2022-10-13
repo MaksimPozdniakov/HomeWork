@@ -38,20 +38,21 @@ Palindrom(a);
 double Rastoynie(double xA, double xB, double xC, double yA, double yB, double yC)
 {
     double abc;
-    abc = Math.Sqrt(Math.Pow(xC-xB-xA,2)+Math.Pow(yC-yB-yA,2));
+
+    abc = Math.Sqrt(Math.Pow(xA-yA,2) + Math.Pow(xB-yB,2) + Math.Pow(xC-yC,2));
     return Math.Round(abc, 2);
 }
 Console.Write("Input xA ");
 double xA = Convert.ToDouble(Console.ReadLine());
 Console.Write("Input xB ");
 double xB = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input xC ");
+double xC = Convert.ToDouble(Console.ReadLine());
 Console.Write("Input yA ");
 double yA = Convert.ToDouble(Console.ReadLine());
 Console.Write("Input yB ");
 double yB = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input yA ");
-double xC = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input yB ");
+Console.Write("Input yC ");
 double yC = Convert.ToDouble(Console.ReadLine());
 Console.Write(Rastoynie(xA, xB, xC, yA, yB, yC));
 */
