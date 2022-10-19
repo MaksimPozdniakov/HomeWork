@@ -144,3 +144,44 @@ Console.WriteLine($"Result = {Division(myArray)}.");
 
 // Дополнительная задача! Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 // Ну и примеры: [1 2 3 4 5] -> 5 8 3; [6 7 3 6] -> 36 21  
+/*
+int[] NewArray(int size)
+{
+    int[] Array = new int[size];
+
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите {i+1} элемент массива ");
+        Array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    Console.WriteLine();
+    return Array;
+}
+
+void PrintMyArray(int[] Array)
+{
+    for (int i = 0; i < Array.Length; i++)
+    Console.Write(Array[i] + " ");
+}
+
+int Multiplication(int[] Array)
+{
+    int result = 0;
+    for(int i = 0; i < Array.Length; i++)
+    {
+        result = Array[Array.Length-1];
+    }
+    return result;
+}
+
+Console.Write("Какого размера должен быть массив? ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+int[] myArray = NewArray(size);
+
+PrintMyArray(myArray);
+
+Console.WriteLine();
+
+Console.WriteLine($"{Multiplication(myArray)}.");
+*/

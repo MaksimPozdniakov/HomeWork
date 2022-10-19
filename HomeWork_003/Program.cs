@@ -15,10 +15,20 @@ void Palindrom(int num)
     {
         if (firstNum == lastNum)
         {
-            firstNum = firstNum / 1000 % 10;
-            lastNum = lastNum % 100 / 10;
+            firstNum = num / 1000 % 10;
+            lastNum = num % 100 / 10;
+            {
+                if (firstNum == lastNum)
+                {
+                    Console.WriteLine("Данное число является палиндромом ");
+                }
+                else
+                {
+                    Console.WriteLine("Данное число не является палиндромом ");
+                }
+            }
             
-            Console.WriteLine("Данное число является палиндромом ");
+            
         }
         else
         {
