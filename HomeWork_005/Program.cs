@@ -31,7 +31,7 @@ int PozitivNumbers(int[] Array)
     return count;
 }
 
-Console.Write("Imput numbers of array ");
+Console.Write("Imput size of array ");
 int size = Convert.ToInt32(Console.ReadLine());
 PrintMyArray(NewArray(size));
 
@@ -81,7 +81,7 @@ PrintMyArray(myArray);
 
 Console.WriteLine();
 
-Console.WriteLine($"Result = {SumNegativPozition(myArray)}.");
+Console.WriteLine($"Result = {SumNegativPozition(myArray)}");
 */
 
 // Задача №3. Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
@@ -164,24 +164,34 @@ void PrintMyArray(int[] Array)
     Console.Write(Array[i] + " ");
 }
 
-int Multiplication(int[] Array)
+int[] Multiplication(int[] Array)
 {
-    int result = 0;
-    for(int i = 0; i < Array.Length; i++)
+    int length = Array.Length / 2 + Array.Length % 2;
+
+    int[] newArray = new int[length];
+
+    for(int i = 0; i < length; i++)
     {
-        result = Array[Array.Length-1];
+        if(i != Array.Length - i - 1)
+        { 
+            newArray[i] = Array[i] * Array[Array.Length - 1 - i];
+        }
+        else 
+        {
+            newArray[i] = Array[i];
+        } 
     }
-    return result;
+    return newArray;
 }
 
 Console.Write("Какого размера должен быть массив? ");
 int size = Convert.ToInt32(Console.ReadLine());
 
 int[] myArray = NewArray(size);
-
 PrintMyArray(myArray);
 
 Console.WriteLine();
 
-Console.WriteLine($"{Multiplication(myArray)}.");
+int[] result = Multiplication(myArray);
+PrintMyArray(result);
 */
