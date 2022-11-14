@@ -267,7 +267,7 @@ ShowArray(myArray3);
 12 13 14 05
 11 16 15 06
 10 09 08 07 */
-/*
+
 int[,] SpiralArrey()
 {
     Console.Write("Введите количество строк ");
@@ -275,34 +275,34 @@ int[,] SpiralArrey()
     Console.Write("Введите количество столбцов ");
     int colums = Convert.ToInt32(Console.ReadLine());
     
-    int[,] arraySpiral = new int[rows, colums];
+    int[,] mySpiralArrey = new int[rows, colums];
     for (int passage = 0, valueElements = 1; valueElements <= rows * colums; passage++)
     {
         for (int i = passage, j = passage; j < colums - passage; j++)
         {
-            arraySpiral[i, j] = valueElements;
+            mySpiralArrey[i, j] = valueElements;
             valueElements++;
         }
         if(valueElements > rows * colums) break;
         for (int i = passage + 1, j = colums - passage - 1; i < rows - passage; i++)
         {
-            arraySpiral[i, j] = valueElements;
+            mySpiralArrey[i, j] = valueElements;
             valueElements++;
         }
         if(valueElements > rows * colums) break;
         for (int i = rows - passage - 1, j = colums - passage - 2; j >= passage; j--)
         {
-            arraySpiral[i, j] = valueElements;
+            mySpiralArrey[i, j] = valueElements;
             valueElements++;
         }
         if(valueElements > rows * colums) break;
         for (int i = rows - passage - 2, j = passage; i > passage; i--)
         {
-            arraySpiral[i, j] = valueElements;
+            mySpiralArrey[i, j] = valueElements;
             valueElements++;
         }
     }
-    return arraySpiral;
+    return mySpiralArrey;
 }
 
 void ShowArray(int[,] myArray)
@@ -328,4 +328,3 @@ void ShowArray(int[,] myArray)
 int[,] mySpiralArrey = SpiralArrey();
 
 ShowArray(mySpiralArrey);
-*/
