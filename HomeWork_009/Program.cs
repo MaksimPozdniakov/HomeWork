@@ -48,5 +48,5 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input number n ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-Console.Write(Akkerman(m,n));
+Console.Write($" m = {m}, n = {n} -> {Akkerman(m,n)}");
 */
