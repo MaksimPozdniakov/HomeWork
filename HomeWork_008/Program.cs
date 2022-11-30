@@ -267,65 +267,67 @@ ShowArray(myArray3);
 12 13 14 05
 11 16 15 06
 10 09 08 07 */
-/*
+
 int[,] SpiralArrey()
 {
     Console.Write("Введите количество строк ");
     int rows = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите количество столбцов ");
     int colums = Convert.ToInt32(Console.ReadLine());
-    
-    int[,] mySpiralArrey = new int[rows, colums];
-    for (int passage = 0, valueElements = 1; valueElements <= rows * colums; passage++)
+
+    int[,] myArray = new int[rows,colums];
+ 
+    for( int position = 0, value = 1; value <= rows * colums; position++)
     {
-        for (int i = passage, j = passage; j < colums - passage; j++)
-        {
-            mySpiralArrey[i, j] = valueElements;
-            valueElements++;
-        }
-        if(valueElements > rows * colums) break;
-        for (int i = passage + 1, j = colums - passage - 1; i < rows - passage; i++)
-        {
-            mySpiralArrey[i, j] = valueElements;
-            valueElements++;
-        }
-        if(valueElements > rows * colums) break;
-        for (int i = rows - passage - 1, j = colums - passage - 2; j >= passage; j--)
-        {
-            mySpiralArrey[i, j] = valueElements;
-            valueElements++;
-        }
-        if(valueElements > rows * colums) break;
-        for (int i = rows - passage - 2, j = passage; i > passage; i--)
-        {
-            mySpiralArrey[i, j] = valueElements;
-            valueElements++;
-        }
+        for (int i = position, j = position; j < colums - position; j++)
+            {
+                myArray[i,j] = value;
+                value++;
+            }
+            if(value > colums * rows) break;
+        
+        for (int i = position + 1, j = colums - position - 1; i < rows - position; i++)
+            {
+                myArray[i,j] = value;
+                value++;
+            }
+            if(value > colums * rows) break;
+
+        for (int i = rows - position - 1, j = colums - position - 2; j >= position; j--)
+            {
+                myArray[i,j] = value;
+                value++;
+            }
+            if(value > colums * rows) break;
+
+        for (int i = rows - position - 2, j = position; i > position; i--)
+            {
+                myArray[i,j] = value;
+                value++;
+            }
+            if(value > colums * rows) break;
     }
-    return mySpiralArrey;
+    return myArray;
 }
 
 void ShowArray(int[,] myArray)
 {
-    for(int i = 0; i < myArray.GetLength(0); i++)
+    for (int i = 0; i < myArray.GetLength(0); i++)
     {
-        for(int j = 0; j < myArray.GetLength(1); j++)
+        for (int j = 0; j < myArray.GetLength(1); j++)
         {
             if(myArray[i,j] < 10)
             {
-               Console.Write("0" + myArray[i,j] + " "); 
+                Console.Write($"0{myArray[i,j]}" + " ");
             }
             else
             {
-                Console.Write(myArray[i,j] + " "); 
+               Console.Write(myArray[i,j]+" "); 
             }
-
         }
         Console.WriteLine();
-    }   
+    }
 }
 
-int[,] mySpiralArrey = SpiralArrey();
-
-ShowArray(mySpiralArrey);
-*/
+int[,] myArray = SpiralArrey();
+ShowArray(myArray);
