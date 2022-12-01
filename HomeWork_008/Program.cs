@@ -61,7 +61,7 @@ SortArray(myArray);
 ShowArray(myArray);
 */
 //Задача 56. Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
-/*
+/* 
 int[,] RandomArray()
 {
     Console.Write("Введите количество строк ");
@@ -128,10 +128,10 @@ int[,] myArray = RandomArray();
 ShowArray(myArray);
 
 Sum(myArray);
-*/
+ */
 
 // Задача 58. Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
-/*
+/* 
 int[,] RandomArray()
 {
     Console.Write("Введите количество строк ");
@@ -188,7 +188,7 @@ Console.WriteLine();
 
 int[,] result = NewArray(myArray1,myArray2);
 ShowArray(result);
-*/
+ */
 
 // Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 /* Массив размером 2 x 2 x 2
@@ -196,7 +196,7 @@ ShowArray(result);
 34(1,0,0) 41(1,1,0)
 27(0,0,1) 90(0,1,1)
 26(1,0,1) 55(1,1,1) */
-/*
+/* 
 int[] TwoDigitPositiveNumsArray()
 {
     int[] myArray = Enumerable.Range(10, 90).ToArray(); // создается массив двузначных чисел
@@ -259,7 +259,7 @@ void ShowArray(int[,,] myArray)
 int[] myArray = TwoDigitPositiveNumsArray();
 int[,,] myArray3 = RandomArray(myArray);
 ShowArray(myArray3);
-*/
+ */
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 /* Например, на выходе получается вот такой массив:
@@ -267,7 +267,7 @@ ShowArray(myArray3);
 12 13 14 05
 11 16 15 06
 10 09 08 07 */
-
+/* 
 int[,] SpiralArrey()
 {
     Console.Write("Введите количество строк ");
@@ -331,3 +331,4 @@ void ShowArray(int[,] myArray)
 
 int[,] myArray = SpiralArrey();
 ShowArray(myArray);
+ */
